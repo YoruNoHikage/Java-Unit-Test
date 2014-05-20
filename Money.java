@@ -23,10 +23,12 @@ public class Money {
 	}
 	
 	public boolean checkCurrency(Money m) {
-		if(m._currency == this._currency)
-			return true;
-		else
-			return false;
+		return this._currency.equals(m._currency);
+	}
+	
+	public void changeCurrency(String s, float rate) {
+		this._currency = s;
+		this._amount *= rate;
 	}
 	
 	public boolean checkCurrency(String s) {
