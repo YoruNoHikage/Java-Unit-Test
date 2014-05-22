@@ -31,28 +31,16 @@ public class MoneyTest {
 	
 	@Test
 	public void test3() {	
-		try{
-			money1.add(money1);
-			assertEquals("Error potato1 in system", "0.0 EUR", money1.toString());
-			assertEquals("Error potato2 in system", "2.0 EUR", money1.toString());
-			System.out.println("3passed");
-		}catch(AssertionError e){
-			System.out.println("3error");
-			throw e;
-		}
+		money1.add(money1);
+		assertEquals("Error potato1 in system", "0.0 EUR", money1.toString());
+		assertEquals("Error potato2 in system", "2.0 EUR", money1.toString());
 	}
 	
 	@Test
 	public void test4() {
-		try {
-			money1.add(money1);
-			money1.add(new Money(3, "EUR"));
-			assertEquals("3.0 EUR", money1.toString());
-			System.out.println("4passed");
-		}catch(AssertionError e){
-			System.out.println("4error");
-			throw e;
-		}
+		money1.add(money1);
+		money1.add(new Money(3, "EUR"));
+		assertEquals("3.0 EUR", money1.toString());
 	}
 	
 	@Test
